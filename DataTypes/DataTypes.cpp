@@ -15,13 +15,6 @@ const float TAX = 0.1f; // 10% tax rate
 
 float totalHours, grossIncome, taxAmount, netIncome;
 
-int main()
-{
-	
-
-
-}
-
 void userInput() {
 	cout << "Enter first name: ";
 	cin >> name;
@@ -74,3 +67,12 @@ void displayPayroll() {
 	cout << "Net Income: $" << netIncome << "\n";
 }
 
+int main()
+{
+
+	userInput();
+	getTotalHoursWorked();
+	calculatePayroll();
+	displayPayroll();
+
+}
