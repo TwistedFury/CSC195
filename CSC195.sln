@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataTypes", "DataTypes\Data
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UserDataTypes", "UserDataTypes\UserDataTypes.vcxproj", "{A553EA69-B0D1-46A0-932E-6EF1D5887A25}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InClassMaze", "InClassMaze\InClassMaze.vcxproj", "{7093095F-8437-4D7A-BB04-C34846FDE3E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{A553EA69-B0D1-46A0-932E-6EF1D5887A25}.Release|x64.Build.0 = Release|x64
 		{A553EA69-B0D1-46A0-932E-6EF1D5887A25}.Release|x86.ActiveCfg = Release|Win32
 		{A553EA69-B0D1-46A0-932E-6EF1D5887A25}.Release|x86.Build.0 = Release|Win32
+		{7093095F-8437-4D7A-BB04-C34846FDE3E3}.Debug|x64.ActiveCfg = Debug|x64
+		{7093095F-8437-4D7A-BB04-C34846FDE3E3}.Debug|x64.Build.0 = Debug|x64
+		{7093095F-8437-4D7A-BB04-C34846FDE3E3}.Debug|x86.ActiveCfg = Debug|Win32
+		{7093095F-8437-4D7A-BB04-C34846FDE3E3}.Debug|x86.Build.0 = Debug|Win32
+		{7093095F-8437-4D7A-BB04-C34846FDE3E3}.Release|x64.ActiveCfg = Release|x64
+		{7093095F-8437-4D7A-BB04-C34846FDE3E3}.Release|x64.Build.0 = Release|x64
+		{7093095F-8437-4D7A-BB04-C34846FDE3E3}.Release|x86.ActiveCfg = Release|Win32
+		{7093095F-8437-4D7A-BB04-C34846FDE3E3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
