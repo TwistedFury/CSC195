@@ -46,9 +46,10 @@ void doLists() {
 	fruits.push_front("Apple"); // Place "Apple" at front
 	fruits.push_back("Elderberry"); // Place "Elderberry" at end
 
-	for (int i = 0; i < fruits.size() - 1; i++) {
-		cout << fruits.front() << endl;
-		fruits.pop_front();
+	// Following code found on StackOverflow, then edited for my needs.
+	// Linkie: https://stackoverflow.com/questions/16229729/printing-out-contents-of-a-list-from-the-c-list-library
+	for (auto v : fruits) {
+		cout << v << endl;
 	}
 }
 
