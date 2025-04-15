@@ -22,6 +22,21 @@ public:
 	{
 		std::cout << "druggie constructor\n";
 	}
+	
+	void setNumEnemy(enemies_t enemies) 
+	{ 
+		if (numEnemies < 0 || numEnemies > 100) return;
+		numEnemies = enemies;
+	}
+	enemies_t getNumEnemy() { return numEnemies; }
+
+	void setIsPoor(bool isPoor) { this->isPoor = isPoor; }
+	bool getIsPoor() { return isPoor; }
+
+	void setIsJailed(bool isJailed) { this->isJailed = isJailed; }
+	bool getIsJailed() { return isJailed; }
+
+	Type getType() override { return Type::DRUGGIE; }
 
 private:
 	bool isPoor = true;

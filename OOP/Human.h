@@ -9,6 +9,13 @@ using age_t = unsigned short;
 class Human
 {
 public:
+    enum class Type : unsigned char
+    {
+        STUDENT,
+        DRUGGIE
+    };
+
+public:
     Human()
     {
         cout << "human constructor\n";
@@ -34,6 +41,8 @@ public:
     age_t getAge() { return m_age; }
 
     void setAge(age_t age);
+
+    virtual Type getType() = 0;
 
     static int getCount() { return m_count; }
 

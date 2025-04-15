@@ -19,6 +19,8 @@ public:
 	float getGPA() { return gpa; }
 	void setGPA(float gpa) { this->gpa = gpa; }
 
+	Type getType() override { return Type::STUDENT; }
+
 private:
 	float gpa = 4.0f;
 };
