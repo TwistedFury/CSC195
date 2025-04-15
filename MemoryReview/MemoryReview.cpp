@@ -7,9 +7,44 @@ struct Person
 	int id;
 };
 
+// ** REFERENCE PARAMETER **
+	//
+	// create a function above main() called Square that takes in an int
+	// parameter
+	// in the function, multiply the int parameter by itself and assign it back
+	// to the parameter(i = i * i)
+	// call the Square function with the int variable created in the REFERENCE
+	// section
+	// output the int variable to the console
+	// !! notice how the variable has not changed, this is because we only passed
+	// the value to the function !!
+	// change the Square function to take a int reference
+	// !! notice how the calling variable has now changed, this is because we
+	// 'passed by reference' !!
+	// !! when a function takes a reference parameter, any changes to the
+	// parameter changes the calling variable ""
+
 int& square(int& num) {
 	num *= num;
 	return num;
+}
+
+// ** POINTER PARAMETER **
+	//
+	// create a function above main() called Double that takes in an int pointer
+	// parameter
+	// in the function, multiply the int pointer parameter by 2 and assign it
+	// back to the parameter(i = i * 2)
+	// !! make sure to dereference the pointer to set the value and not set the
+	// address !!
+	// call the Double function with the pointer created in the POINTER VARIABLE
+	// section
+	// output the dereference pointer
+	// output the int variable created in the REFERENCE section
+	// did the int variable's value change when using the pointer? (yes)
+
+void Double(int* ptr) {
+	*ptr *= 2;
 }
 
 int main()
@@ -42,23 +77,6 @@ int main()
 	cout << &reference << endl;
 	cout << "Same reference address...\n";
 
-	// ** REFERENCE PARAMETER **
-	//
-	// create a function above main() called Square that takes in an int
-	// parameter
-	// in the function, multiply the int parameter by itself and assign it back
-	// to the parameter(i = i * i)
-	// call the Square function with the int variable created in the REFERENCE
-	// section
-	// output the int variable to the console
-	// !! notice how the variable has not changed, this is because we only passed
-	// the value to the function !!
-	// change the Square function to take a int reference
-	// !! notice how the calling variable has now changed, this is because we
-	// 'passed by reference' !!
-	// !! when a function takes a reference parameter, any changes to the
-	// parameter changes the calling variable ""
-
 	cout << square(reference) << endl;
 
 	// ** POINTER VARIABLE **
@@ -70,20 +88,14 @@ int main()
 	ptr = &someNumber;
 	// output the value of the pointer
 	cout << ptr << endl;
-	// what is this address that the pointer is pointing to? (insert answer)
+	// what is this address that the pointer is pointing to? (insert answer) ----- same address as previously printed
 	// output the value of the object the pointer is pointing to (dereference the
 	// pointer)
-	// ** POINTER PARAMETER **
-	//
-	// create a function above main() called Double that takes in an int pointer
-	// parameter
-	// in the function, multiply the int pointer parameter by 2 and assign it
-	// back to the parameter(i = i * 2)
-	// !! make sure to dereference the pointer to set the value and not set the
-	// address !!
-	// call the Double function with the pointer created in the POINTER VARIABLE
-	// section
-	// output the dereference pointer
-	// output the int variable created in the REFERENCE section
-	// did the int variable's value change when using the pointer?
+	cout << *ptr << endl;
+
+	Double(ptr);
+	cout << someNumber << endl;
+
+	//  someNumber changes due to Double() function.
+
 }
