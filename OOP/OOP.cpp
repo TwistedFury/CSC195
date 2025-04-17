@@ -4,42 +4,54 @@
 // #include "Human.h" ( because "Student.h" already includes "Human.h" )
 #include "Student.h"
 #include "Druggie.h"
+#include "Neighborhood.h"
 
 using namespace std;
 
 int main()
 {
+	Neighborhood neighborhood;
 
-    cout << sizeof(Human) << endl; // 48 bytes
+	bool quit = false;
 
-    //Student student1("Raymond", 48, 3.4f);
+	while (!quit)
+	{
+		// DISPLAY MENU
 
-    vector<Human*> neighborhood; // I didn't do Teacher, so this makes sense
-    neighborhood.push_back(new Student{ "Noel", 19, 4.0f });
-    neighborhood.push_back(new Druggie{ "Lance", 19, true, false, 5 });
+		cout << "1.) Add Human\n";
+		cout << "2.) Display All Humans\n";
+		cout << "3.) Display Human(s) of Type\n";
+		cout << "0.) Exit\n";
 
-    for (int i = 0; i < neighborhood.size(); i++)
-    {
-        if (neighborhood[i]->getType() == Human::Type::STUDENT) // or if (dynamic_cast<Student*>(neighborhood[i]))
-        {
-            cout << dynamic_cast<Student*>(neighborhood[i])->getGPA() << endl;
-        }
-        else if (neighborhood[i]->getType() == Human::Type::DRUGGIE)
-        {
-            cout << dynamic_cast<Druggie*>(neighborhood[i])->getNumEnemy() << endl;
-        }
-        cout << neighborhood[i]->getName() << endl;
-    }
+		unsigned short selection;
+		cin >> selection;
 
+		switch (selection)
+		{
+		case 1:
+			cout << "1.) Student";
+			cout << "2.) Druggie";
+			
+			unsigned short type;
+			cin >> type;
 
+			neighborhood.Add(static_cast<Human::Type>(type - 1));
+			break;
+		case 2:
+			break;
+			neighborhood.DisplayAll();
+		case 3:
+			break;
+		case 0:
+			quit = true;
+			break;
+		default: // ask again
+			continue;
+		}
 
-    Student* student1 = new Student("Raymond", 48, 3.4f);
+		neighborhood.Add(Human::Type::STUDENT);
+		neighborhood.DisplayAll();
 
-    cout << student1->getName() << endl;
-    cout << student1->getAge() << endl;
-    cout << static_cast<char>(student1->getType()) << endl;
+	}
 
-    cout << Human::getCount() << endl;
-
-    delete student1;
 }

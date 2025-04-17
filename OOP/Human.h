@@ -36,6 +36,9 @@ public:
         m_count--;
     }
 
+    virtual void Read();
+    virtual void Write();
+
     string getName() { return m_name; }
 
     age_t getAge() { return m_age; }

@@ -9,3 +9,18 @@ void func()
 }
 
 void Human::setAge(unsigned short age) { m_age = age; }
+
+void Human::Read()
+{
+    std::cout << "Enter name:\t";
+    std::cin >> m_name;
+    std::cout << endl;
+    std::cout << "Enter age:\t";
+    std::cin >> m_age;
+    std::cout << endl;
+}
+
+void Human::Write()
+{
+    std::cout << "Name:\t" << m_name << "\t(" << m_age << ")";
+}

@@ -16,6 +16,9 @@ public:
 		std::cout << "student constructor\n";
 	}
 
+	void Read() override;
+	void Write() override;
+
 	float getGPA() { return gpa; }
 	void setGPA(float gpa) { this->gpa = gpa; }
 

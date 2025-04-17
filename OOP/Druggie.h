@@ -38,6 +38,9 @@ public:
 
 	Type getType() override { return Type::DRUGGIE; }
 
+	void Read() override;
+	void Write() override;
+
 private:
 	bool isPoor = true;
 	bool isJailed = true;
