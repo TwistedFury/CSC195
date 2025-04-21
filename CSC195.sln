@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OOP", "OOP\OOP.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C++Classes", "C++Classes\C++Classes.vcxproj", "{7428660C-1BD4-407A-ACA5-D081EC59C98C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartPointers", "SmartPointers\SmartPointers.vcxproj", "{9C8D7660-431F-4987-9DF2-A85D6E45002A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{7428660C-1BD4-407A-ACA5-D081EC59C98C}.Release|x64.Build.0 = Release|x64
 		{7428660C-1BD4-407A-ACA5-D081EC59C98C}.Release|x86.ActiveCfg = Release|Win32
 		{7428660C-1BD4-407A-ACA5-D081EC59C98C}.Release|x86.Build.0 = Release|Win32
+		{9C8D7660-431F-4987-9DF2-A85D6E45002A}.Debug|x64.ActiveCfg = Debug|x64
+		{9C8D7660-431F-4987-9DF2-A85D6E45002A}.Debug|x64.Build.0 = Debug|x64
+		{9C8D7660-431F-4987-9DF2-A85D6E45002A}.Debug|x86.ActiveCfg = Debug|Win32
+		{9C8D7660-431F-4987-9DF2-A85D6E45002A}.Debug|x86.Build.0 = Debug|Win32
+		{9C8D7660-431F-4987-9DF2-A85D6E45002A}.Release|x64.ActiveCfg = Release|x64
+		{9C8D7660-431F-4987-9DF2-A85D6E45002A}.Release|x64.Build.0 = Release|x64
+		{9C8D7660-431F-4987-9DF2-A85D6E45002A}.Release|x86.ActiveCfg = Release|Win32
+		{9C8D7660-431F-4987-9DF2-A85D6E45002A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
