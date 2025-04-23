@@ -27,7 +27,7 @@ namespace math
 
 		bool operator == (const Point<T>& other) const
 		{
-			return (x == other.x && y == other.y)
+			return (x == other.x && y == other.y);
 		}
 
 		bool operator != (const Point<T>& other) const
@@ -35,11 +35,11 @@ namespace math
 			return !(*this == other);
 		}
 
-		friend std::ostream& operator << (std::ostream& ostream, const Point<T>& p) const
+		/*friend std::ostream& operator << (std::ostream& ostream, const Point<T>& p) const
 		{
-			ostream << p.x << " " << p.y;
+			ostream << p.x << ", " << p.y;
 			return ostream;
-		}
+		}*/
 
 		T GetX() { return x; }
 		T GetY() { return y; }
