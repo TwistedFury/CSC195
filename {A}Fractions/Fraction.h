@@ -75,7 +75,7 @@ namespace mathlib
 
 		bool operator != (const Fraction<T>& otherFrac) const
 		{
-			return !(this == otherFrac);
+			return !(operator==(otherFrac));
 		}
 
 		bool operator > (const Fraction<T>& otherFrac) const
@@ -92,12 +92,12 @@ namespace mathlib
 
 		bool operator >= (const Fraction<T>& otherFrac) const
 		{
-			return (this > otherFrac || this == otherFrac);
+			return (operator>(otherFrac) || operator==(otherFrac));
 		}
 
 		bool operator <= (const Fraction<T>& otherFrac) const
 		{
-			return (this < otherFrac || this == otherFrac);
+			return (operator<(otherFrac) || operator==(otherFrac));
 		}
 
 		// STREAM OPERATORS
@@ -107,8 +107,8 @@ namespace mathlib
 		friend std::istream& operator >> (std::istream& istream, Fraction<U>& frac);
 
 		// TO DECIMAL
-		double ToDouble() { return numerator / denominator; }
-		float ToFloat() { return ((float) numerator / denominator); }
+		double ToDouble() const { return numerator / denominator; }
+		float ToFloat() const { return ((float) numerator / denominator); }
 
 		// CODE PROVIDED BY LMS, CONVERTED TO C++
 		Fraction<T> Simplify() const

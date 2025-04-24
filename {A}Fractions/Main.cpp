@@ -18,6 +18,15 @@ int main()
     std::cout << fraction1 << " + " << fraction2 << " result: " << (fraction1 + fraction2) << std::endl;
     std::cout << fraction1 << " * " << fraction2 << " result: " << (fraction1 * fraction2) << std::endl;
 
+    std::cout << fraction1 << " - " << fraction2 << " result: " << (fraction1 - fraction2) << std::endl;
+    std::cout << fraction1 << " / " << fraction2 << " result: " << (fraction1 / fraction2) << std::endl;
+
+    std::cout << fraction1 << " < " << fraction2 << " result: " << (fraction1 < fraction2) << std::endl;
+    std::cout << fraction1 << " != " << fraction2 << " result: " << (fraction1 != fraction2) << std::endl;
+
+    std::cout << fraction1 << " <= " << fraction2 << " result: " << (fraction1 <= fraction2) << std::endl;
+    std::cout << fraction1 << " >= " << fraction2 << " result: " << (fraction1 >= fraction2) << std::endl;
+
     Fraction<long> fraction3; // It's a long, because I can.
     std::cout << "input fraction (numerator - denominator): \n";
     std::cin >> fraction3;
