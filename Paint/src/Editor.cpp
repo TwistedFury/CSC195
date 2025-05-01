@@ -22,49 +22,49 @@ Editor::Editor()
 void Editor::Update()
 {
 	InitializeInstructions(); // This is the instructions in the top-left
-	if (IsKeyDown(KEY_EQUAL)) 
+	if (IsKeyDown(KEY_EQUAL) || IsGamepadButtonDown(1, GAMEPAD_BUTTON_LEFT_FACE_UP)) 
 	{ 
 		size += 0.25f; 
 		if (size > 200) { size = 200; }
 		curShape = Create(curType);
 	}
-	if (IsKeyDown(KEY_MINUS)) 
+	if (IsKeyDown(KEY_MINUS) || IsGamepadButtonDown(1, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) 
 	{ 
 		size -= 0.25f; 
 		if (size < 5) { size = 5; }
 		curShape = Create(curType);
 	}
-	if (IsKeyPressed(KEY_DELETE))
+	if (IsKeyPressed(KEY_DELETE) || IsGamepadButtonPressed(1, GAMEPAD_BUTTON_LEFT_TRIGGER_1))
 	{
 		ClearAll();
 	}
-	if (IsKeyPressed(KEY_C))
+	if (IsKeyPressed(KEY_C) || IsGamepadButtonPressed(1, GAMEPAD_BUTTON_RIGHT_FACE_RIGHT))
 	{
 		curType = Shape::Type::Circle;
 		curShape = Create(curType);
 	}
-	if (IsKeyPressed(KEY_S))
+	if (IsKeyPressed(KEY_S) || IsGamepadButtonPressed(1, GAMEPAD_BUTTON_RIGHT_FACE_LEFT))
 	{
 		curType = Shape::Type::Square;
 		curShape = Create(curType);
 	}
-	if (IsKeyPressed(KEY_T))
+	if (IsKeyPressed(KEY_T) || IsGamepadButtonPressed(1, GAMEPAD_BUTTON_RIGHT_FACE_UP))
 	{
 		curType = Shape::Type::Triangle;
 		curShape = Create(curType);
 	}
-	if (IsKeyPressed(KEY_E))
+	if (IsKeyPressed(KEY_E) || IsGamepadButtonPressed(1, GAMEPAD_BUTTON_RIGHT_FACE_DOWN))
 	{
 		curType = Shape::Type::Eraser;
 		curShape = Create(curType);
 	}
-	if (IsKeyPressed(KEY_RIGHT))
+	if (IsKeyPressed(KEY_RIGHT) || IsGamepadButtonPressed(1, GAMEPAD_BUTTON_RIGHT_TRIGGER_1))
 	{
 		curColorIndex += 1;
 		curColorIndex %= colors.size();
 		curShape = Create(curType);
 	}
-	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) || (IsMouseButtonDown(MOUSE_BUTTON_LEFT) && IsKeyDown(KEY_LEFT_CONTROL)))
+	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) || (IsMouseButtonDown(MOUSE_BUTTON_LEFT) && IsKeyDown(KEY_LEFT_CONTROL)) || IsGamepadButtonDown(1, GAMEPAD_BUTTON_RIGHT_TRIGGER_2))
 	{
 		shapes.push_back(curShape);
 		curShape = Create(curType);
